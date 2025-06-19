@@ -1,1 +1,1 @@
-# Automatic-plant-watering-system
+# Smart Plant Monitoring and Watering System
