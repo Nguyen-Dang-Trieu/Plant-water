@@ -1,4 +1,0 @@
-"stt","mediumint"
-"temperature","float"
-"SOIL","int"
-"mode","char"
