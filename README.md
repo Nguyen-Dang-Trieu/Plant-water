@@ -24,8 +24,11 @@ The system consists of sensors that measure environmental conditions such as tem
 - ✔️ The Raspberry Pi 3B+ runs an MQTT broker (HiveMQ) and C client to process and forward data.
 - ✔️ The laptop subscribes to MQTT topics to receive and display the data.
 
-## 📈 System Diagram
-![](./image/system.png)
+## 📈 Diagram
+### System
+<img src="./image/system.png" width="800">
 
-- Monitor screen
+### Monitor screen
 ![](./image/web.png)
+
+## 🚀 How to Run
