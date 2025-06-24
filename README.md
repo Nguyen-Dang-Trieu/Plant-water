@@ -10,7 +10,7 @@ The system consists of sensors that measure environmental conditions such as tem
 - The Raspberry Pi publishes the data via MQTT protocol to a laptop (host) for real-time display and monitoring.
 - The Arduino can control a DC water pump motor for automated watering when soil moisture is low.
 
-## 🛠️ Deviceshttps://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/README.md
+## 🛠️ Devices
 - Raspberry Pi 3B+ (MQTT broker & data processing)
 - Arduino Uno (ATmega328P) (bare-metal C code for sensor reading & control)
 - Sensors:
