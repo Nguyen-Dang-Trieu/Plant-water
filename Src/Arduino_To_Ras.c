@@ -1,3 +1,4 @@
+#include "gpio.h"
 #include <DHT.h>                                                // Gọi thư viện DHT22
 
 #define DHTPIN 7                                                // Đọc dữ liệu từ DHT22 ở chân D7 trên mạch Arduino
