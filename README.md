@@ -26,7 +26,7 @@ The system consists of sensors that measure environmental conditions such as tem
 
 ## 📈 Diagram
 ### System
-<img src="./Image/system.png" width="800">
+<img src="./Image/system_.png" width="800">
 
 ### Monitor screen
 ![](./Image/web.png)
