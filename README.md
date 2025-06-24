@@ -20,8 +20,12 @@ The system consists of sensors that measure environmental conditions such as tem
 - DC water pump motor
 
 ## ⚙️ Implementation
-- The Arduino Uno is programmed in bare-metal C, directly accessing hardware registers for GPIO, ADC, and I2C communication.
-- The Raspberry Pi 3B+ runs an MQTT broker (HiveMQ) and C client to process and forward data.
-- The laptop subscribes to MQTT topics to receive and display the data.
+- ✔️ The Arduino Uno is programmed in bare-metal C, directly accessing hardware registers for GPIO, ADC, and I2C communication.
+- ✔️ The Raspberry Pi 3B+ runs an MQTT broker (HiveMQ) and C client to process and forward data.
+- ✔️ The laptop subscribes to MQTT topics to receive and display the data.
 
 ## 📈 System Diagram
+![](./image/system.png)
+
+- Monitor screen
+![](./image/web.png)
