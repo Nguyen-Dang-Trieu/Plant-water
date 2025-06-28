@@ -1,10 +1,10 @@
 # 🌱 Smart Plant Monitoring and Watering System
-# 📚 Table of Contents
+## 📚 Table of Contents
 - [Introduction](#-introduction)
 - [Project Description](#-project-description)
 - [Project Structure](#-project-structure)
-- [Devices](#-devices)
-- [Implementation](#-implementation)
+- [Devices](#%EF%B8%8F-devices)
+- [Implementation](#%EF%B8%8F-implementation)
 - [Diagram](#-diagram)
 
 ## 📌 Introduction
@@ -20,7 +20,7 @@ The system consists of sensors that measure environmental conditions such as tem
 
 ## 📁 Project Structure
 ~~~
-SmartPlantSystem/
+Plant-water/
 ├── Arduino/                            # Code cho Arduino (bare-metal C)
 │   ├── src/
 │   │   ├── main.c
