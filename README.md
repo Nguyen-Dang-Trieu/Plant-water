@@ -31,13 +31,3 @@ The system consists of sensors that measure environmental conditions such as tem
 ### Monitor screen
 ![](./Image/web.png)
 
-## 🚀 How to Run
-All necessary files to run the project are organized into two main folders: `Src` and `WEB`.
-
-~~~
-├── 📁 Src/ # Source code
-│ ├── Arduino_To_Ras.c # Data is sent from Uno to Pi
-│ ├── MQTT_DATABASE.c  # Run Laptop
-│ └── Ras_To_MQTT.c    # Data is sent from Pi to Laptop
-├── 📁 WEB/ # Frontend 
-~~~
