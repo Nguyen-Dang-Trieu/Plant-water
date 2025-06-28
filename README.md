@@ -21,43 +21,23 @@ The system consists of sensors that measure environmental conditions such as tem
 ## 📁 Project Structure
 ~~~
 Plant-water/
-├── Arduino/                            # Code cho Arduino (bare-metal C)
-│   ├── src/
-│   │   ├── main.c
-│   │   ├── gpio.c
-│   │   ├── adc.c
-│   │   ├── dht22.c
-│   │   ├── bh1750.c
-│   │   └── soil_moisture.c
-│   ├── inc/
-│   │   ├── gpio.h
-│   │   ├── adc.h
-│   │   ├── dht22.h
-│   │   ├── bh1750.h
-│   │   └── soil_moisture.h
-│   └── Makefile                       # Biên dịch bằng AVR-GCC
-│
-├── RaspberryPi/                       # Code xử lý và truyền dữ liệu (MQTT client)
-│   ├── mqtt_client.c
-│   ├── mqtt_client.h
-│   ├── utils.c
-│   └── CMakeLists.txt
-│
-├── WebInterface/                      # Hiển thị dữ liệu từ MQTT trên laptop
-│   ├── index.html
-│   ├── script.js
-│   ├── styles.css
-│   └── mqtt.js                        # Thư viện kết nối MQTT qua WebSocket
-│
-├── Images/                            # Hình minh họa sơ đồ và giao diện
+├── BareMetal_Peripherals/             # Code Bare-metal C for ATmega328p
+│   ├── *.h
+│   └── *.c
+├── Doc/                               # Datasheet for sensor and MQTT
+├── Driver/                            # Library for communicating with DHT22 and BH1750 sensors.
+│   ├── BH1750_Lib
+│   └── DHT22_Lib                       
+├── Images/                            # Schematic and interface illustrations
 │   ├── system_.png
 │   └── web.png
-│
-├── docs/                              # Báo cáo hoặc tài liệu hướng dẫn
-│   └── final_report.pdf
-│
-├── README.md
-└── LICENSE
+├── Src/
+│   ├── Arduino_To_Rasp.c              # Run on Arduino
+│   ├── MQTT_DATABASE.c                # Run on Laptop
+│   └── Ras_To_MQTT.c                  # Run on Rasp Pi 3B+
+├── WEB/ 
+├── LICENSE
+└── README.md
 ~~~
 
 ## 🛠️ Devices
