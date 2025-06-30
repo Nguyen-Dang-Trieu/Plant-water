@@ -1,14 +1,21 @@
 #include "gpio.h"
 
-void GPIOx_ConfigMode(volatile uint8_t* DDRx, uint8_t PIN, bool MODE)
+void GPIOx_ConfigMode(volatile uint8_t* DDRx, volatile uint8_t* PORTx, uint8_t PIN, bool MODE)
 {
-  if(MODE) // Mode: INPUT
-  {
-    *DDRx &= ~(1 << PIN); // DDRx = 0 -> input
-  }
-  else   // Mode: OUTPUT
-  {
-    *DDRx |= (1 << PIN);  // DDRx = 1 -> output
+  switch(MODE) {
+  case OUTPUT:
+    *DDRx |= (1 << PIN);
+    break;
+  case INPUT:
+    *DDRx &= ~(1 << PIN);
+    *PORTx &= ~(1 << PIN); // Disable pull-up
+    break;
+  case INPUT_PULLUP:
+    *DDRx &= ~(1 << PIN);
+    *PORTx |= (1 << PIN); // Enable pull-up
+    break;
+  default:
+    break;
   }
 }
 
