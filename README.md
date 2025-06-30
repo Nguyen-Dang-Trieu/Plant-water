@@ -55,14 +55,14 @@ Plant-water/
 - ✔️ The Raspberry Pi 3B+ runs an MQTT broker (HiveMQ) and C client to process and forward data.
 - ✔️ The laptop subscribes to MQTT topics to receive and display the data.
 
-## 📈 Diagram
+##  🍃 Diagram
 ### System
 <img src="./Image/system_.png" width="800">
 
 ### Monitor screen
 ![](./Image/web.png)
 
-### Development
+### 📈 Development
 - Add module nrf24L01 to be able to communicate wirelessly
 - Redesign the web interface
 - ...
