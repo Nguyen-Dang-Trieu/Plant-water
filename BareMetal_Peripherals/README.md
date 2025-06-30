@@ -77,3 +77,45 @@ int main()
   return 0;
 }
 ~~~
+### I2C Driver
+~~~c
+#include <stdio.h>
+#include "avr/io.h"
+#include "util/delay.h"
+#include "i2c.h"
+
+int main()
+{
+  I2Cx_Init(); /// // Khởi tạo I2C
+
+  uint8_t slave_addr = 0x50;
+  uint8_t data_to_send = 0x10;
+  uint8_t buffer[4];
+
+  while(true)
+  {
+    I2Cx_Start();
+
+    I2Cx_Write((slave_addr << 1) | 0 ); // Slave address + mode: Write
+
+    I2Cx_Write(data_to_send); // Gửi địa chỉ thanh ghi cần đọc
+
+    I2Cx_Start();
+
+    I2Cx_Write((slave_addr << 1) | 1);  //  mode: Read
+
+    // Đọc dữ liệu từ slave
+    for (uint8_t i = 0; i < 4; i++) {
+        if (i < 3)
+            buffer[i] = I2Cx_Read_ACK();  
+        else
+            buffer[i] = I2Cx_Read_NACK(); 
+    }
+
+    I2Cx_Stop();
+
+    delay(1000); 
+  }
+  return 0;
+}
+~~~
