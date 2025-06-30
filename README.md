@@ -48,6 +48,7 @@ Plant-water/
   - BH1750 (light intensity)
   - Soil moisture sensor
 - DC water pump motor
+- Module Relay 5V
 
 ## ⚙️ Implementation
 - ✔️ The Arduino Uno is programmed in bare-metal C, directly accessing hardware registers for GPIO, ADC, and I2C communication.
