@@ -62,3 +62,7 @@ Plant-water/
 ### Monitor screen
 ![](./Image/web.png)
 
+### Development
+- Add module nrf24L01 to be able to communicate wirelessly
+- Redesign the web interface
+- ...
