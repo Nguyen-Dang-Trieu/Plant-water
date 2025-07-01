@@ -35,7 +35,7 @@ Plant-water/
 │   ├── Arduino_To_Rasp.c              # Run on Arduino
 │   ├── MQTT_DATABASE.c                # Run on Laptop
 │   └── Ras_To_MQTT.c                  # Run on Rasp Pi 3B+
-├── WEB/                               # # Web dashboard for viewing sensor data on laptop
+├── WEB/                               # Web dashboard for viewing sensor data on laptop
 ├── LICENSE
 └── README.md
 ~~~
