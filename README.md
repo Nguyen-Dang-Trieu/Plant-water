@@ -66,5 +66,5 @@ Plant-water/
 - Add module nrf24L01 to be able to communicate wirelessly
 - Write bootloader to update firmware throught nrf24l01.
 - Redesign the web interface (Blynk IoT Platform)
-- ic flash W25Q64
+- ic flash W25Q64, https://www.youtube.com/watch?v=GvqfkNLJmu0
 - ...
