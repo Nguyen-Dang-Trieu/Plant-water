@@ -68,3 +68,4 @@ Plant-water/
 - Redesign the web interface (Blynk IoT Platform)
 - ic flash W25Q64, https://www.youtube.com/watch?v=GvqfkNLJmu0
 - Tìm hiểu về GDD, 
+- EEPROM: ic2431
