@@ -1,13 +1,15 @@
 # 🌱 Smart Plant Monitoring and Watering System
+![](./Image/Title.png)
+
 ## 📚 Table of Contents
-- [Introduction](#-introduction)
+- [Overview](#-introduction)
 - [Project Description](#-project-description)
 - [Project Structure](#-project-structure)
 - [Devices](#%EF%B8%8F-devices)
 - [Implementation](#%EF%B8%8F-implementation)
 - [Diagram](#-diagram)
 
-## 📌 Introduction
+## 📌 Overview
 This is the final project for the Embedded Systems course.
 The system monitors environmental parameters for crops and supports automated watering.
 
