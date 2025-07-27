@@ -45,14 +45,16 @@ Plant-water/
 
 ## 🛠️ Devices
 ### 1. Hardware
-- Raspberry Pi 3B+ (MQTT broker & data processing)
-- Arduino Uno (ATmega328P) (bare-metal C code for sensor reading & control)
-- Sensors:
-  - DHT22 (temperature & humidity)
-  - BH1750 (light intensity)
-  - Soil moisture sensor
-- DC water pump motor
-- Module Relay 5V
+
+| STT     |        Name           | Price   |
+| :-----: | :-------------------- | :------:|
+|    1    | Raspberrby 3B+        |    💰   | 
+|    2    | Arduino Uno           |    💰   | 
+|    3    | DHT22                 |    💰   |  
+|    4    | BH1750                |    💰   |   
+|    5    | Soil moisture         |    💰   | 
+|    6    | DC water pump motor   |    💰   | 
+|    7    | Module Relay 5V       |    💰   |  
 
 ### 2. Driver Lib
 | Device Name           | Library Completed  | Check   |  API     |
@@ -87,7 +89,7 @@ Follow these steps to set up and run the project:
 ## 📈 Development
 - Add module nrf24L01 to be able to communicate wirelessly
 - Write bootloader to update firmware throught nrf24l01.
-- Redesign the web interface (Blynk IoT Platform)
+- Redesign the web interface (Blynk IoT Platform), Node-Read
 - ic flash W25Q64, https://www.youtube.com/watch?v=GvqfkNLJmu0
 - Tìm hiểu về GDD, 
 - EEPROM: ic2431
