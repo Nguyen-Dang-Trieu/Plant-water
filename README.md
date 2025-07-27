@@ -1,5 +1,8 @@
 # 🌱 Smart Plant Monitoring and Watering System
-![](./Image/Title.png)
+
+<p align="center">
+  <img src="./Image/Title_.png" width="600">
+</p>
 
 ## 📚 Table of Contents
 - [Overview](#-introduction)
@@ -31,8 +34,6 @@ Plant-water/
 │   ├── BH1750_Lib
 │   └── DHT22_Lib                       
 ├── Images/                            # Schematic and interface illustrations
-│   ├── system_.png
-│   └── web.png
 ├── Src/
 │   ├── Arduino_To_Rasp.c              # Run on Arduino
 │   ├── MQTT_DATABASE.c                # Run on Laptop
