@@ -53,6 +53,17 @@ Plant-water/
 - DC water pump motor
 - Module Relay 5V
 
+## 🚀 Getting Started
+Follow these steps to set up and run the project:
+
+1. **Clone the Repository:**  
+   Clone this repository to your local machine using:
+   ~~~bash
+   
+   ~~~
+2. **Install dependent libraries**
+3. **Run the appropriate files for the hardware according to the directory**
+
 ## ⚙️ Implementation
 - ✔️ The Arduino Uno is programmed in bare-metal C, directly accessing hardware registers for GPIO, ADC, and I2C communication.
 - ✔️ The Raspberry Pi 3B+ runs an MQTT broker (HiveMQ) and C client to process and forward data.
