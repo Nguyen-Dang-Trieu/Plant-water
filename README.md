@@ -6,7 +6,7 @@
 
 ## 📚 Table of Contents
 - [Overview](#-overview)
-- [Project Description](#-description)
+- [Description](#-description)
 - [Project Structure](#-project-structure)
 - [Devices](#%EF%B8%8F-devices)
 - [Implementation](#%EF%B8%8F-implementation)
