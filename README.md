@@ -5,8 +5,8 @@
 </p>
 
 ## 📚 Table of Contents
-- [Overview](#-introduction)
-- [Project Description](#-project-description)
+- [Overview](#-overview)
+- [Project Description](#-description)
 - [Project Structure](#-project-structure)
 - [Devices](#%EF%B8%8F-devices)
 - [Implementation](#%EF%B8%8F-implementation)
