@@ -44,6 +44,7 @@ Plant-water/
 ~~~
 
 ## 🛠️ Devices
+### 1. Hardware
 - Raspberry Pi 3B+ (MQTT broker & data processing)
 - Arduino Uno (ATmega328P) (bare-metal C code for sensor reading & control)
 - Sensors:
@@ -53,13 +54,20 @@ Plant-water/
 - DC water pump motor
 - Module Relay 5V
 
+### 2. Driver Lib
+| Device Name           | Library Completed  | Check   |  API     |
+| :-------------------- | :----------------: | :-----: | :-----:  |
+| Bare-metal ATmega328p |       ✔️          | ✔️      |  Detail   |
+| DHT22                 |       ✔️          | ✔️      |  Detail |
+| BH1750                |       ✔️          | ✔️      |  Detail |   
+
 ## 🚀 Getting Started
 Follow these steps to set up and run the project:
 
 1. **Clone the Repository:**  
    Clone this repository to your local machine using:
    ~~~bash
-   
+   https://github.com/Nguyen-Dang-Trieu/Plant-water.git
    ~~~
 2. **Install dependent libraries**
 3. **Run the appropriate files for the hardware according to the directory**
@@ -70,13 +78,13 @@ Follow these steps to set up and run the project:
 - ✔️ The laptop subscribes to MQTT topics to receive and display the data.
 
 ##  🍃 Diagram
-### System
+### 1. System
 <img src="./Image/system_.png" width="800">
 
-### Monitor screen
+### 2. Monitor screen
 ![](./Image/web.png)
 
-### 📈 Development
+## 📈 Development
 - Add module nrf24L01 to be able to communicate wirelessly
 - Write bootloader to update firmware throught nrf24l01.
 - Redesign the web interface (Blynk IoT Platform)
