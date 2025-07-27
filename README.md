@@ -59,9 +59,9 @@ Plant-water/
 ### 2. Driver Lib
 | Device Name           | Library Completed  | Check   |  API     |
 | :-------------------- | :----------------: | :-----: | :-----:  |
-| Bare-metal ATmega328p |       ✔️          | ✔️      |  Detail   |
-| DHT22                 |       ✔️          | ✔️      |  Detail |
-| BH1750                |       ✔️          | ✔️      |  Detail |   
+| Bare-metal ATmega328p |       ✔️          | ✔️      |  [Detail](https://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/Doc/ATmega328p_API.md) |
+| DHT22                 |       ✔️          | ✔️      |  [Detail](https://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/Doc/DHT22_API.md)      |
+| BH1750                |       ✔️          | ✔️      |  [Detail](https://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/Doc/BH1750_API.md)     |   
 
 ## 🚀 Getting Started
 Follow these steps to set up and run the project:
