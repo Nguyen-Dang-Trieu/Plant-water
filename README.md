@@ -90,6 +90,6 @@ Follow these steps to set up and run the project:
 - Add module nrf24L01 to be able to communicate wirelessly
 - Write bootloader to update firmware throught nrf24l01.
 - Redesign the web interface (Blynk IoT Platform), Node-Read
-- ic flash W25Q64, https://www.youtube.com/watch?v=GvqfkNLJmu0
 - Tìm hiểu về GDD, 
 - EEPROM: ic2431
+- Dùng arduino mega 2560 + external RAM
