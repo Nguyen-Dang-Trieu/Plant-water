@@ -92,4 +92,4 @@ Follow these steps to set up and run the project:
 - Redesign the web interface (Blynk IoT Platform), Node-Read
 - Tìm hiểu về GDD, 
 - EEPROM: ic2431
-- Dùng arduino mega 2560 + external RAM
+- Dùng arduino mega 2560 + external RAM (SRAM 62256 DIP-28)
