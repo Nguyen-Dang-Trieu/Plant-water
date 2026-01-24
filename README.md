@@ -1,7 +1,7 @@
 # 🌱 Smart Plant Monitoring and Watering System
 
 <p align="center">
-  <img src="./Image/Title_.png" width="600">
+  <img src="./images/Title_.png" width="600">
 </p>
 
 ## 📚 Table of Contents
@@ -81,10 +81,10 @@ Follow these steps to set up and run the project:
 
 ##  🍃 Diagram
 ### 1. System
-<img src="./Image/system_.png" width="800">
+<img src="./images/system_.png" width="800">
 
 ### 2. Monitor screen
-![](./Image/web.png)
+![](./images/web.png)
 
 ## 📈 Development
 - Add module nrf24L01 to be able to communicate wirelessly

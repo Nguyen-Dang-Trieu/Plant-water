@@ -1,0 +1,3 @@
+[submodule "os/EventOS"]
+	path = os/EventOS
+	url = git@github.com:Nguyen-Dang-Trieu/EventOS.git
