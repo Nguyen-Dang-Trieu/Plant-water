@@ -4,7 +4,7 @@
   <img src="./images/Title_.png" width="600">
 </p>
 
-## System Overview
+## I. System Overview
 This project implements a **distributed embedded and IoT system** for crop monitoring and automated watering.
 - Multiple **AVR-based sensor nodes** collect environmental data (temperature, humidity, light, soil moisture).
 - A **Raspberry Pi 3B+** acts as an **IoT gateway**, aggregating data from sensor nodes via **NRF24L01** wireless modules and forwarding it through **MQTT** to a host.
@@ -14,24 +14,24 @@ This project implements a **distributed embedded and IoT system** for crop monit
   <img src="./images/System_Overview.png" width="600">
 </p>
 
-## System Architecture
-### Node MCU (Sensor Node) Software Architecture
+## II. System Architecture
+### 1. Node MCU (Sensor Node) Software Architecture
 - The node runs a **lightweight event-driven OS**.
 - Each **task** in the OS is implemented as a **finite state machine (FSM)**.
 
 <p align="center">
-  <img src="./images/Node_MCU_1.png" width="600">
+  <img src="./images/Node_MCU_1.png" width="400">
 </p>
 
 > All OS details can be found in the `os/` directory.
 
-### IoT Gateway (Raspberry Pi) Software Architecture
+### 2. IoT Gateway (Raspberry Pi) Software Architecture
 - A custom **device driver** is implemented for NRF24L01 communication.
 - Non-essential components are removed to **increase processing speed**.
 - The gateway receives data from sensor nodes, processes it, and publishes to **MQTT broker** for the host.
 
 
-##  Devices
+## III. Devices
 | No.     |        Component      | Role            | 
 | :-----: | :--------------------:| :--------------:| 
 |    1    | Raspberrby 3B+        | IoT Gateway     | 
@@ -45,7 +45,7 @@ This project implements a **distributed embedded and IoT system** for crop monit
 |    7    | Module Relay 5V       |       |  
 
 
-## 🚀 Getting Started
+## 🚀 IV. Getting Started
 Follow these steps to set up and run the project:
 
 1. **Clone the Repository:**  
@@ -56,7 +56,7 @@ Follow these steps to set up and run the project:
 2. **Install dependent libraries**
 3. **Run the appropriate files for the hardware according to the directory**
 
-##  Web Darboard
+## V. Web Darboard
 ![](./images/web.png)
 
 > **Note**
@@ -68,3 +68,6 @@ Follow these steps to set up and run the project:
 - Redesign the web interface (Blynk IoT Platform), Node-Read
 - Tìm hiểu về GDD, 
 - EEPROM: ic2431
+
+### Reference
+- https://github.com/microsoft/IoT-For-Beginners/tree/main
