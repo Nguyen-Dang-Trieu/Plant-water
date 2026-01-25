@@ -19,7 +19,9 @@ This project implements a **distributed embedded and IoT system** for crop monit
 - The node runs a **lightweight event-driven OS**.
 - Each **task** in the OS is implemented as a **finite state machine (FSM)**.
 
-Hình ảnh
+<p align="center">
+  <img src="./images/Node_MCU_1.png" width="600">
+</p>
 
 > All OS details can be found in the `os/` directory.
 
