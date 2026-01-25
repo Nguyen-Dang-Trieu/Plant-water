@@ -29,7 +29,7 @@ static int i2c_transfer(BusInterface* bus,
 
 BusInterface i2c_bus = {
     .type     = BUS_I2C,
-    .lock     = dummy_lock,
-    .unlock   = dummy_unlock,
+    .lock     = NULL,
+    .unlock   = NULL,
     .transfer = i2c_transfer
 };

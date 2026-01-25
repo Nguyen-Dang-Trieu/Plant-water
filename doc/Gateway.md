@@ -1,0 +1,1 @@
+Với Raspberry Pi 3B+, khi làm nhiệm vụ Gateway thu thập dữ liệu từ NodeMCU và đẩy lên MQTT, "nút thắt cổ chai" thường không nằm ở CPU mà nằm ở tốc độ đọc ghi (I/O), quản lý bộ nhớ và độ trễ mạng.

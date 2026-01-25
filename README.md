@@ -1,67 +1,47 @@
-# 🌱 Smart Plant Monitoring and Watering System
+# 🌱 Multi-Node Agricultural Monitoring via IoT Gateway
 
 <p align="center">
   <img src="./images/Title_.png" width="600">
 </p>
 
-## 📚 Table of Contents
-- [Overview](#-overview)
-- [Description](#-description)
-- [Project Structure](#-project-structure)
-- [Devices](#%EF%B8%8F-devices)
-- [Implementation](#%EF%B8%8F-implementation)
-- [Diagram](#-diagram)
+## System Overview
+This project implements a **distributed embedded and IoT system** for crop monitoring and automated watering.
+- Multiple **AVR-based sensor nodes** collect environmental data (temperature, humidity, light, soil moisture).
+- A **Raspberry Pi 3B+** acts as an **IoT gateway**, aggregating data from sensor nodes via **NRF24L01** wireless modules and forwarding it through **MQTT** to a host.
+- A **host machine** visualizes the data via a web dashboard in real-time.
 
-## 📌 Overview
-This is the final project for the Embedded Systems course.
-The system monitors environmental parameters for crops and supports automated watering.
+<p align="center">
+  <img src="./images/System_Overview.png" width="600">
+</p>
 
-## 📖 Description
-The system consists of sensors that measure environmental conditions such as temperature 🌡️, humidity 💧, light intensity ☀️, and soil moisture 🌱.
-- Data is collected by an Arduino Uno (ATmega328P) running bare-metal C code (no Arduino libraries).
-- The Arduino sends the data to a Raspberry Pi 3B+, which acts as the central processing server.
-- The Raspberry Pi publishes the data via MQTT protocol to a laptop (host) for real-time display and monitoring.
-- The Arduino can control a DC water pump motor for automated watering when soil moisture is low.
+## System Architecture
+### Node MCU (Sensor Node) Software Architecture
+- The node runs a **lightweight event-driven OS**.
+- Each **task** in the OS is implemented as a **finite state machine (FSM)**.
 
-## 📁 Project Structure
-~~~
-Plant-water/
-├── BareMetal_Peripherals/             # Code Bare-metal C for ATmega328p
-│   ├── *.h
-│   └── *.c
-├── Doc/                               # Datasheet for sensor and MQTT
-├── Driver/                            # Library for communicating with DHT22 and BH1750 sensors.
-│   ├── BH1750_Lib
-│   └── DHT22_Lib                       
-├── Images/                            # Schematic and interface illustrations
-├── Src/
-│   ├── Arduino_To_Rasp.c              # Run on Arduino
-│   ├── MQTT_DATABASE.c                # Run on Laptop
-│   └── Ras_To_MQTT.c                  # Run on Rasp Pi 3B+
-├── WEB/                               # Web dashboard for viewing sensor data on laptop
-├── LICENSE
-└── README.md
-~~~
+Hình ảnh
 
-## 🛠️ Devices
-### 1. Hardware
+> All OS details can be found in the `os/` directory.
 
-| STT     |        Name           | Price   |
-| :-----: | :-------------------- | :------:|
-|    1    | Raspberrby 3B+        |    💰   | 
-|    2    | Arduino Uno           |    💰   | 
-|    3    | DHT22                 |    💰   |  
-|    4    | BH1750                |    💰   |   
-|    5    | Soil moisture         |    💰   | 
-|    6    | DC water pump motor   |    💰   | 
-|    7    | Module Relay 5V       |    💰   |  
+### IoT Gateway (Raspberry Pi) Software Architecture
+- A custom **device driver** is implemented for NRF24L01 communication.
+- Non-essential components are removed to **increase processing speed**.
+- The gateway receives data from sensor nodes, processes it, and publishes to **MQTT broker** for the host.
 
-### 2. Driver Lib
-| Device Name           | Library Completed  | Check   |  API     |
-| :-------------------- | :----------------: | :-----: | :-----:  |
-| Bare-metal ATmega328p |       ✔️          | ✔️      |  [Detail](https://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/Doc/ATmega328p_API.md) |
-| DHT22                 |       ✔️          | ✔️      |  [Detail](https://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/Doc/DHT22_API.md)      |
-| BH1750                |       ✔️          | ✔️      |  [Detail](https://github.com/Nguyen-Dang-Trieu/Plant-water/blob/main/Doc/BH1750_API.md)     |   
+
+##  Devices
+| No.     |        Component      | Role            | 
+| :-----: | :--------------------:| :--------------:| 
+|    1    | Raspberrby 3B+        | IoT Gateway     | 
+|    2    | ATmega2560            | Sensor Node MCU |        
+|    3    | DHT22                 | Temperature & Humidity Sensor      |  
+|    4    | BH1750                | Light Intensity Sensor       |  
+|    5    | SSD1306               | Local Display      |   
+|    6    | SRAM 62256 DIP-28     | External Memory    | 
+|    5    | Soil moisture         | Soil Condition Monitoring      | 
+|    6    | DC water pump motor   |       | 
+|    7    | Module Relay 5V       |       |  
+
 
 ## 🚀 Getting Started
 Follow these steps to set up and run the project:
@@ -74,17 +54,11 @@ Follow these steps to set up and run the project:
 2. **Install dependent libraries**
 3. **Run the appropriate files for the hardware according to the directory**
 
-## ⚙️ Implementation
-- ✔️ The Arduino Uno is programmed in bare-metal C, directly accessing hardware registers for GPIO, ADC, and I2C communication.
-- ✔️ The Raspberry Pi 3B+ runs an MQTT broker (HiveMQ) and C client to process and forward data.
-- ✔️ The laptop subscribes to MQTT topics to receive and display the data.
-
-##  🍃 Diagram
-### 1. System
-<img src="./images/system_.png" width="800">
-
-### 2. Monitor screen
+##  Web Darboard
 ![](./images/web.png)
+
+> **Note**
+> Current interface is a prototype from student project. Future updates will include real-time monitoring and a modern UI.
 
 ## 📈 Development
 - Add module nrf24L01 to be able to communicate wirelessly
@@ -92,4 +66,3 @@ Follow these steps to set up and run the project:
 - Redesign the web interface (Blynk IoT Platform), Node-Read
 - Tìm hiểu về GDD, 
 - EEPROM: ic2431
-- Dùng arduino mega 2560 + external RAM (SRAM 62256 DIP-28)
